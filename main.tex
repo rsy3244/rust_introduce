@@ -1,14 +1,72 @@
-\documentclass[dvipdfmx, 12pt]{beamer}
+\documentclass[12pt, dvipdfmx]{beamer}
+\usepackage{graphicx,xcolor}
+\usepackage{subfiles}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{url}
+\usetikzlibrary{calc,decorations.pathreplacing,quotes,positioning,shapes,fit,arrows,backgrounds,tikzmark}
+\tikzset{Node/.style={circle, draw}}
 
-\title{Rustをはじめよう}
+\usetheme{metropolis}
+\usefonttheme{professionalfonts}
+\setbeamercolor{alerted text}{fg=mLightBrown!90!black}
 
+\usepackage{bxdpx-beamer}
+\usepackage{minijs}
+\usepackage{latexsym}
+\usepackage[deluxe,expert]{otf}
+\renewcommand{\kanjifamilydefault}{\gtdefault}
+
+\setbeamersize{text margin left=.75zw, text margin right=.75zw}
+\setbeamertemplate{frame footer}{}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=\textbullet}
+
+\setbeamertemplate{section in toc}[ball unnumbered]
+\setbeamertemplate{subsection in toc}[square]
+
+\title{Rustはいいぞ}
+\institute{北海道大学　情報知識ネットワーク研究室　M1}
+\author{光吉　健汰}
 
 \begin{document}
-\frame{
 \maketitle
-}
-\begin{frame}
-	test
+\begin{frame}{目次}
+	\small
+	\tableofcontents
+\end{frame}
+
+\begin{frame}{Rustとは？}
+	効率的で信頼できるソフトウェアを誰もが作れる言語\footnotemark
+
+	\begin{itemize}
+		\item パフォーマンス　C言語やC++言語と同等程度の処理速度
+		\item 信頼性　null参照が（自ら踏み込まない限り）できない
+		\item 生産性　ツールが最初から揃っている
+	\end{itemize}
+
+	最も愛されているプログラミング言語\footnotemark
+
+	\footnotetext[1]{\url{https://www.rust-lang.org/ja}}
+	\footnotetext[2]{\url{https://www.rust-lang.org/ja}}
+\end{frame}
+
+\begin{frame}{パフォーマンス}
+	すごいはやい
+\end{frame}
+
+\begin{frame}{信頼性}
+	所有権モデルすごい
+\end{frame}
+
+\begin{frame}{生産性}
+	ツールがいっぱい
+	\begin{itemize}
+		\item Cargo　ビルド、デバッグ、テスト、ドキュメント生成、パッケージ管理なんでもできる
+		\item 各種エディタ拡張　VScode、ST3、IntelliJ、Vimなど様々なエディタ拡張を公式サポート
+		\item Crate.io　パッケージレジストリ、コミュニティが活発で多くのライブラリが公開されている
+	\end{itemize}
 \end{frame}
 
 \end{document}
